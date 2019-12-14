@@ -1,0 +1,109 @@
+<html>
+<head>
+       <title>DB Query</title>
+</head>
+
+<body bgcolor="#DDDDDD">
+
+<h2>Welcome to the Distribution Database Query Interface!</h2>
+
+<hr>
+
+<p style="width: 40%; text-align: left"><b>
+Enter a product from the "dist_base" database. This query will display the quantity sold of a particular product.<br>
+</b><p>
+
+<form action="query1.php" method="POST">
+
+<input type="text" name="product" placeholder="(e.g. frame)"> &nbsp &nbsp <a style="text-decoration: none" href="query1.php">php</a><br>
+<input type="submit" value="submit">
+<input type="reset" value="erase">
+</form>
+
+<p style="width: 40%; text-align: left"><b>
+Enter a customer from the "dist_base" database. This query will display that customer's orders. Possible inputs include:
+"John Smith", "Will Richard", "Alex Jones", "Mike Anthony"...
+</b><p>
+
+<form action="query2.php" method="POST">
+
+<input type="text" name="customer" placeholder="(e.g. Alex Jones)"> &nbsp &nbsp <a style="text-decoration: none" href="query2.php">php</a> <br>
+<input type="submit" value="submit">
+<input type="reset" value="erase">
+</form>
+
+<p style="width: 40%; text-align: left"><b>
+Useful query for displaying customers who have purchased at least a certain amount from the warehouse. Enter an integer amount: <br>
+</b><p>
+
+<form action="query3.php" method="POST">
+
+<input type="text" name="amount" placeholder="(e.g. 50)"> &nbsp &nbsp <a style="text-decoration: none" href="query3.php">php</a><br>
+<input type="submit" value="submit">
+<input type="reset" value="erase">
+</form>
+
+<p style="width: 40%; text-align: left"><b>
+Allows the user to specify a customerID and returns the average amount payed to the warehouse over the lifetime of the customer. Output includes the customerID, name, and the average payment amount.<br>
+</b><p>
+
+<form action="query4.php" method="POST">
+
+<input type="text" name="average" placeholder="(e.g. 3)"> &nbsp &nbsp <a style="text-decoration: none" href="query4.php">php</a><br>
+<input type="submit" value="submit">
+<input type="reset" value="erase">
+</form>
+
+<p style="width: 40%; text-align: left"><b>
+Highlights employees which have an employeeID greater than an input amount. <br> This allows users to visualize particular sections of the employee table. <br>
+</b><p>
+
+<form action="query5.php" method="POST">
+
+<input type="text" name="ID" placeholder="(e.g. 6)"> &nbsp &nbsp <a style="text-decoration: none" href="query5.php">php</a> <br>
+<input type="submit" value="submit">
+<input type="reset" value="erase">
+</form>
+
+<p style="width: 40%; text-align: left"><b>
+Shows the customers who were helped by a supervisor's employees. <br> Useful for a boss who would like to check employee activity <br>(some employee's haven't helped anyone).<br>
+</b><p>
+
+<form action="query6.php" method="POST">
+
+<input type="text" name="supervisor" placeholder="(e.g. 2)"> &nbsp &nbsp <a style="text-decoration: none" href="query6.php">php</a> <br>
+<input type="submit" value="submit">
+<input type="reset" value="erase">
+</form>
+
+<p style="width: 40%; text-align: left"><b>
+Allows warehouse data analysts to track the largest sales (by volume) of a particular price range of items. For instance, inputting $500 will return orders with the greatest quantity sold for that price range (by average).<br>Output shows the product as well as the MSRP and quantity sold for that product.<br>
+</b><p>
+
+<form action="query7.php" method="POST">
+
+<input type="text" name="data" placeholder="(e.g. 40)"> &nbsp &nbsp <a style="text-decoration: none" href="query7.php">php</a> <br>
+<input type="submit" value="submit">
+<input type="reset" value="erase">
+</form>
+
+<p style="width: 40%; text-align: left"><b>
+Shows customers of the warehouse who share a city with one of the company's offices. Input can be used to specify the particular state in which they reside. This may be useful for customer support.<br>
+</b><p>
+
+<form action="query8.php" method="POST">
+
+<input type="text" name="office" placeholder="(e.g. OR)"> &nbsp &nbsp <a style="text-decoration: none" href="query8.php">php</a> <br>
+<input type="submit" value="submit">
+<input type="reset" value="erase">
+</form>
+
+<hr>
+<p style="text-align: center"><strong>
+Lucas Hyatt &nbsp ~ &nbsp DB Interface <br> Implemented using HTML/CSS, <a style="text-decoration: none" href="dist_base.sql">mySQL</a>, and PHP
+</strong></p>
+<hr>
+
+
+</body>
+</html>
